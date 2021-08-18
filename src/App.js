@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import LittleBox from './components/LittleBox'
+
+function Squares(){
+  let squares = [];
+  for(var i=0; i<9; i++){
+    squares.push(<LittleBox id={i}></LittleBox>)
+  }
+  
+  return squares
+}
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <div className="box">
+       <div style={{width:"157px", height:"150px", margin:"20px auto 0 auto"}}><Squares></Squares></div>
+     </div>
     </div>
   );
 }
